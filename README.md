@@ -2,15 +2,13 @@
 ====================================
 # 개발환경
 1. Server : Apache Tomcat v9.0
-2. javaversion 1.8.0_181
-3. eclipse version 4.12
-4. jdk version 11.0.9_12
-5. oracle version 10
-6. spirng framewrok version 5.0.7.RELEASE
+2. java : javaversion 1.8.0_181
+3. IDE : eclipse version 4.12
+4. JDK : jdk version 11.0.9_12
+5. DB : oracle version 10
+6. Framework: spirng framewrok version 5.0.7.RELEASE
+              mybatis 3.5.6
 7. bootstrap : bootstrap_admin2
-
-# 프로젝트 빌드
-프로젝트(rtest) -> Run As -> Run on Server(Apache Tomecat)
 
 # oracle.sql 위치
 webapp -> resources
