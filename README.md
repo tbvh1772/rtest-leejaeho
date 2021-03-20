@@ -16,3 +16,6 @@ webapp -> resources
 
 #테스트파일 위치
 src/test/java
+1. com.rtest.controller
+2. com.rtest.mapper
+3. com.rtest.service`
