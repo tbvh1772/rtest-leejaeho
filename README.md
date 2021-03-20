@@ -14,7 +14,7 @@
 # oracle.sql 위치
 webapp -> resources
 
-#테스트 파일 위치
+# 테스트 파일 위치
 src/test/java
 1. com.rtest.controller
 2. com.rtest.mapper
