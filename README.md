@@ -7,6 +7,7 @@
 4. jdk version 11.0.9_12
 5. oracle version 10
 6. spirng framewrok version 5.0.7.RELEASE
+7. bootstrap : bootstrap_admin2
 
 # 프로젝트 빌드
 프로젝트(rtest) -> Run As -> Run on Server(Apache Tomecat)
