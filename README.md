@@ -1,6 +1,6 @@
 알서포트  백엔드 개발자 과제 - 이재호
 ====================================
-# 실행환경
+# 개발환경
 1. Server : Apache Tomcat v9.0
 2. javaversion 1.8.0_181
 3. eclipse version 4.12
