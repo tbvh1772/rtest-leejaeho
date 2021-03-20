@@ -17,4 +17,4 @@ webapp -> resources
 src/test/java
 1. com.rtest.controller
 2. com.rtest.mapper
-3. com.rtest.service`
+3. com.rtest.service
