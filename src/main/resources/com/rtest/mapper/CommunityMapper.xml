@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   <mapper namespace="com.rtest.mapper.CommunityMapper">
+   
+
+
+<!-- list 목록 -->
+<select id="getList" resultType="com.rtest.domain.CommunityVO">
+   <![CDATA[
+			select
+			post_no, post_title, post_content, user_id, post_date, post_updatedate
+			from(
+				select /* +INDEX_DESC(COMMUNITY_TEST PK_COMMUNITY) */
+				rownum rn, post_no , post_title, post_content, user_id, post_date, post_updatedate
+				from COMMUNITY_TEST
+				where rownum<= #{pageNum} * #{amount}		
+			)
+			where rn > (#{pageNum} -1) * #{amount}
+			]]>
+ 
+</select>
+
+<!-- 총 게시글의 수  -->
+<select id = "getTotal" resultType="int">
+   select count(*) from COMMUNITY_TEST
+
+</select>
+
+<!-- 글쓰기 -->
+<insert id="insertPost">
+	insert into COMMUNITY_TEST(post_no,post_title,post_content,user_id,post_updatedate,file_Name) 
+	values(seq_post.nextval,#{post_title},#{post_content},#{user_id},sysdate,#{fileName})
+</insert>
+
+<!-- 글정보 -->
+<select id = "getView" resultType="com.rtest.domain.CommunityVO">
+	select * from COMMUNITY_TEST where post_no = #{post_no}
+</select>
+
+<!-- 글수정 -->
+<update id = "updateView">
+	update COMMUNITY_TEST set post_title=#{post_title} , post_content=#{post_content} , post_updatedate=sysdate
+	where post_no = #{post_no} 
+</update>
+
+<!-- 글삭제 -->
+<delete id = "delete">
+
+delete from COMMUNITY_TEST where post_no=#{post_no} 
+
+</delete>
+
+
+
+</mapper>
