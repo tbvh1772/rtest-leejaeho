@@ -18,3 +18,6 @@ src/test/java
 1. com.rtest.controller
 2. com.rtest.mapper
 3. com.rtest.service
+
+# 실행
+프로젝트 -> Run As -> Run on Server (Apache Tomcat v9.0)
